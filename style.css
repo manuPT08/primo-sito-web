@@ -1,21 +1,195 @@
 body{
-    background-color: #a6a6a6;
+    background-color: #131323;
     padding: 15px;
     border:2px solid black;
     border-bottom: none;
     border-top: none;
     margin: auto;
     width: 100%;
+    color:#ffffff
 }
 a{
     display: inline-block;
-    background-color: #0c0c0c;
+    background-color: #000000;
     color: white;
     padding: 12 32px;
     border-radius: 6px;
+    
    
 }
+
 h3{
                 color: #ffffff;
-                background-color: #0c0c0c;
-            }
+               
+                height: 40px;
+                padding: 12 32px;
+ }
+
+.logo{
+	width: 20%;
+	height: auto;
+	object-fit: contain;
+	transition: transform 1s;
+	animation: wobble 2s 1;
+}
+header{
+    /*position: relative;*/
+    display: flex;
+    justify-content: space-between;
+    padding: 3vh 5vw;
+    border: 1px solid #fff;
+    align-items: center;
+
+    
+}
+.Logo_header{
+    /*margin: 0;
+    position: absolute;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;*/
+    width: 5vw;
+    
+
+}
+.nav-list{
+    display: flex;
+    justify-content: space-between;
+    gap: 5vw;
+}
+/*Una query multimediale per la larghezza di 320px - dispositivi mobili*/
+@media (min-width: 320px) {
+
+	/*Stili per la larghezza minima di 320px*/
+    nav{
+        height: 50px;
+        margin-top: 0px;
+
+    }
+    
+}
+
+/*Una query multimediale per la larghezza di 768px - tablet*/
+@media (min-width: 768px) {
+    nav{
+        height: 70px;
+        margin-top: 0px;
+    }
+    /*Stili per la larghezza minima di 768px*/
+}
+
+/*Una query multimediale per la larghezza di 1200px - desktop*/
+@media (min-width: 1200px) {
+    nav{
+        height: 100px;
+        margin-top: 0px;
+    }
+    /*Stili per la larghezza minima di 1200px*/
+}
+
+/*Una query multimediale per la larghezza di 1400 px - schermi larghi*/
+@media (min-width: 1400px) {
+    nav{
+        height: 130px;
+        margin-top: 0px;
+    }
+    /*Stili per la larghezza minima di 1400 px*/
+}
+@media (min-width: 1400px) {
+    .burger-menu {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+    }
+}
+.main-nav{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50vw;
+    height: 100vh;
+    background: #272727;
+    border: 1px solid #fff;
+    padding: 20px 10px;
+    transform: translateX(100%);
+}
+.burger-menu::prima,
+
+    .burger-menu::dopo {
+
+        content: ''; /* contenuto vuoto */
+
+        background: #fff; /* il colore dell'hamburger*/
+
+        position: absolute; /* il valore di posizione per l'intero blocco*/
+
+        width: 100%;
+
+        height: 2px; /* lo spessore delle linee dell'hamburger */
+
+    }
+
+
+    .burger-menu::before {
+
+        top: 0; /* la posizione del "panino" dell'hamburger in alto */
+
+    }
+
+
+    .burger-menu span { /* disegneremo il "patty" con l'elemento span */
+
+        background: #fff;
+
+        position: absolute;
+
+        width: 100%;
+
+        top: 9px;
+
+        height: 2px;
+
+    }
+
+    .burger-menu::after {
+
+        bottom: 0; /* la posizione del "panino" dell'hamburger inferiore*/
+
+    }
+    
+.burger-menu.active {
+
+    z-index: 3;
+
+    transform: translateX(-40vw);
+
+}
+
+.burger-menu.active::before {
+
+    transform: rotate(45deg);
+
+    top: 9px;
+
+}
+
+.burger-menu.active::after {
+
+    transform: rotate(-45deg);
+
+    bottom: 9px;
+
+}
+
+.burger-menu.active span {
+
+    transform: scale(0);
+
+}
+
+.main-nav.active {
+
+    transform: translate(0);
+
+}
